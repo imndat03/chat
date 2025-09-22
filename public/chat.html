@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phòng chat</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="chat-container">
+      <div class="chat-sidebar">
+        <div class="sidebar-header">
+          <h2><i class="fas fa-comments"></i> Ứng dụng chat</h2>
+          <h3>
+            <i class="fas fa-hashtag"></i> Phòng: <span id="room-name"></span>
+          </h3>
+        </div>
+        <div class="sidebar-users">
+          <h3><i class="fas fa-users"></i> Đang online</h3>
+          <ul id="users"></ul>
+        </div>
+        <a href="index.html" class="btn leave-btn">Thoát</a>
+      </div>
+
+      <div class="chat-main">
+        <header class="chat-header-main">
+          <h1 id="chat-room-title">Phòng chat</h1>
+        </header>
+        <div class="chat-messages" id="chat-messages"></div>
+        <div class="chat-form-container">
+          <form id="chat-form">
+            <button id="emoji-btn" type="button" class="btn">
+              <i class="far fa-grin"></i>
+            </button>
+            <input
+              id="msg"
+              type="text"
+              placeholder="Nhập tin nhắn..."
+              required
+              autocomplete="off"
+            />
+            <button class="btn"><i class="fas fa-paper-plane"></i> Gửi</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.1/qs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/chat.js"></script>
+  </body>
+</html>
